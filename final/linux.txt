@@ -1,0 +1,44 @@
+2. Write down Linux commands for following statements:
+ i. Redirect the output of ls command to a file named outfile. Use this as an input file for remaining commands. 
+ii. To select the lines in a file which has digit as one of the character in that line and redirect the output to the file named list.
+ iii. Assign execute permission to owner and remove read permission from other for an ordinary file named test by relative way. 
+iv. Create an alias named rm that always deletes file interactively. 
+v. Count the currently login users to the system
+Ans:
+i. ls > outfile
+
+ii. grep "[0-9]" outfile > list
+
+iii. chmod u+x,o-r test
+
+iv. alias rm="rm -i"
+
+v. w | wc -l
+
+3. Write down Linux commands for following statements:
+ i. Redirect the output of cat command to a file named outfile. Use this as an input file for remaining commands.
+ ii. List all hidden files under current directory and store in “hidden” file
+ iii. Assign write permission to owner and remove execute permission from other for an ordinary file named test by absolute way. 
+iv. To create soft and hard link for given file
+ v. To convert lowercase to upper case of a given file 
+vi. To extract 1st and 10th character of a given file 
+vii. To display how many times lines are repeated in a given file
+Ans:
+i. cat > outfile
+
+ii. ls -d .* > hidden
+
+iii. chmod u+w,o-x /path/to/test
+
+iv. ln file softlink and ln -s file hardlink
+
+v. tr '[:lower:]' '[:upper:]' < file
+
+vi. cut -c1,10 file
+
+vii. uniq -c file
+
+
+
+
+
